@@ -1,0 +1,6 @@
+file,output_file,original_rows,cleaned_rows,original_columns,kept_columns,timestamp_nulls,consumption_nulls,prices_nulls,consumption_dtype,prices_dtype,output_path
+CAISO_data.csv,CAISO_data_cleaned.csv,26271,26271,"['timestamps', 'consumption', 'renewable_generation', 'nonrenewable_generation', 'prices', 'year']","['timestamps', 'consumption', 'prices']",0,0,0,float64,float64,cleaned_energy_data/CAISO_data_cleaned.csv
+Germany_energy_Data.csv,Germany_energy_Data_cleaned.csv,43825,43825,"['timestamps', 'renewable_generation', 'nonrenewable_generation', 'consumption', 'prices']","['timestamps', 'consumption', 'prices']",0,0,0,float64,float64,cleaned_energy_data/Germany_energy_Data_cleaned.csv
+Italy_data_actual.csv,Italy_data_actual_cleaned.csv,17518,17518,"['timestamps', 'prices', 'consumption']","['timestamps', 'consumption', 'prices']",0,0,0,float64,float64,cleaned_energy_data/Italy_data_actual_cleaned.csv
+Ercot_data_actual.csv,Ercot_data_actual_cleaned.csv,33715,33715,"['timestamps', 'prices', 'consumption']","['timestamps', 'consumption', 'prices']",0,0,0,float64,float64,cleaned_energy_data/Ercot_data_actual_cleaned.csv
+NewYork_data_actual.csv,NewYork_data_actual_cleaned.csv,52578,52578,"['timestamps', 'prices', 'consumption']","['timestamps', 'consumption', 'prices']",0,0,0,float64,float64,cleaned_energy_data/NewYork_data_actual_cleaned.csv
