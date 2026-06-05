@@ -341,6 +341,40 @@ def run_llm_agent(model_name: str, solve_request: SolveRequest) -> SolveResponse
 
         return ollama_response  
 
+def run_gpt4_agent(solve_request: SolveRequest, model: str = "gpt-4o", temperature: float = 0.0) -> SolveResponse:
+    """Call GPT-4 MCP tool and return a SolveResponse."""
+    gpt4_params = StdioServerParameters(
+        command=sys.executable,
+        args=["-m", "agentic_energy.language_models.gpt4_mcp_server"],
+        env=os.environ,
+    )
+
+    # Do not mutate caller request unless needed.
+    payload = solve_request.model_copy(deep=True)
+    opts = dict(payload.solver_opts or {})
+    opts.setdefault("model", model)
+    opts.setdefault("temperature", temperature)
+    payload.solver = "gpt4"
+    payload.solver_opts = opts
+
+    with MCPServerAdapter(gpt4_params) as gpt4_tools:
+        gpt4_tool = get_tool(gpt4_tools, "gpt4_solve")
+        call_fn = (
+            getattr(gpt4_tool, "call", None)
+            or getattr(gpt4_tool, "run", None)
+            or getattr(gpt4_tool, "__call__", None)
+        )
+        if call_fn is None:
+            raise RuntimeError("Tool gpt4_solve has no callable interface")
+
+        raw = call_fn(solverequest=payload.model_dump(exclude_none=True))
+        if isinstance(raw, dict):
+            return SolveResponse.model_validate(raw)
+        if isinstance(raw, str):
+            return SolveResponse.model_validate(json.loads(raw))
+        return SolveResponse.model_validate(raw)
+
+
 
 # ---------- Visualization MCP client ----------
 

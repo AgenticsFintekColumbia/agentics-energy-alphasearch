@@ -62,11 +62,11 @@ class EnergyDataLoader:
         # --- Supported base files for ACTUALS ---
         self.available_actuals: Dict[str, str] = {
             "CAISO":   "CAISO_data.csv",
-            "ERCOT":   "Ercot_energy_data.csv",
+            "ERCOT":   "Ercot_data_actual.csv",
             "GERMANY": "Germany_energy_Data.csv",
             "ITALY":   "Italy_data_actual.csv",
             "ITALY_TEST": "Italy_data.csv",
-            "NEWYORK": "NewYork_energy_data.csv",
+            "NEWYORK": "NewYork_data_actual.csv",
         }
 
         # --- Supported forecast files by region ---

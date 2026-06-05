@@ -56,6 +56,9 @@ def make_day_inputs_from_forecast(
         demand_MW=demand,
         allow_export=True,
         dt_hours=dt_hours,
+        prices_buy_forecast=prices,
+        prices_sell_forecast=prices,
+        demand_MW_forecast=demand,
     )
 
 
@@ -87,5 +90,54 @@ def run_forecast_step(
         title=f"Price Forecast - {region} {date_str} ({forecast_type})",
     )
 
+    return day_inputs, actual_df, forecast_df, plot
+
+def make_day_inputs_actual_and_forecast(
+    actual_prices: List[float],
+    actual_demand: List[float],
+    forecast_prices: List[float],
+    forecast_demand: List[float],
+    dt_hours: float = 1.0,
+    allow_export: bool = True,
+) -> DayInputs:
+    """Create DayInputs with actuals for ex-post evaluation and forecasts for decisions."""
+    return DayInputs(
+        prices_buy=actual_prices,
+        prices_sell=actual_prices,
+        demand_MW=actual_demand,
+        allow_export=allow_export,
+        dt_hours=dt_hours,
+        prices_buy_forecast=forecast_prices,
+        prices_sell_forecast=forecast_prices,
+        demand_MW_forecast=forecast_demand,
+    )
+
+def run_forecast_step(
+    region: str,
+    date_str: str,
+    forecast_type: str,
+    forecast_plot_path: str,
+) -> Tuple[DayInputs, pd.DataFrame, pd.DataFrame, PlotResponse]:
+    """Load actual + forecast, build DayInputs, and create forecast plot."""
+    actual_df, forecast_df = load_energy_day(region, date_str, forecast_type)
+    forecast_prices, forecast_demand = records_to_arrays(forecast_df)
+    actual_prices, actual_demand = records_to_arrays(actual_df)
+
+    dt_hours = 1.0
+    day_inputs = make_day_inputs_actual_and_forecast(
+        actual_prices=actual_prices,
+        actual_demand=actual_demand,
+        forecast_prices=forecast_prices,
+        forecast_demand=forecast_demand,
+        dt_hours=dt_hours,
+        allow_export=True,
+    )
+
+    plot = run_price_forecast_plot(
+        prices=forecast_prices,
+        dt_hours=dt_hours,
+        out_path=forecast_plot_path,
+        title=f"Price Forecast - {region} {date_str} ({forecast_type})",
+    )
     return day_inputs, actual_df, forecast_df, plot
 
