@@ -1,0 +1,36 @@
+Dataset,Repair,Profit
+Italy,None (original),627354.67
+Italy,C4 (charge clip),550161.87
+Italy,C5 (discharge clip),533614.3
+Italy,C4+C5 (power clip),532766.1
+Italy,C6 (no simult c/d),562053.08
+Italy,C1+C7+C12 (SOC clamp),562053.08
+Italy,Full Repair,607958.31
+new_york_2022,None (original),831252.26
+new_york_2022,C4 (charge clip),826156.79
+new_york_2022,C5 (discharge clip),799171.9
+new_york_2022,C4+C5 (power clip),798588.25
+new_york_2022,C6 (no simult c/d),830444.71
+new_york_2022,C1+C7+C12 (SOC clamp),830444.71
+new_york_2022,Full Repair,806722.64
+new_york_2023,None (original),312220.06
+new_york_2023,C4 (charge clip),310226.68
+new_york_2023,C5 (discharge clip),299569.8
+new_york_2023,C4+C5 (power clip),300763.33
+new_york_2023,C6 (no simult c/d),312107.47
+new_york_2023,C1+C7+C12 (SOC clamp),312107.47
+new_york_2023,Full Repair,304382.64
+texas_2022,None (original),505160.24
+texas_2022,C4 (charge clip),505536.83
+texas_2022,C5 (discharge clip),452437.75
+texas_2022,C4+C5 (power clip),460889.43
+texas_2022,C6 (no simult c/d),504283.97
+texas_2022,C1+C7+C12 (SOC clamp),504283.97
+texas_2022,Full Repair,468406.58
+texas_2023,None (original),204928.07
+texas_2023,C4 (charge clip),205748.78
+texas_2023,C5 (discharge clip),194377.79
+texas_2023,C4+C5 (power clip),195092.77
+texas_2023,C6 (no simult c/d),205150.55
+texas_2023,C1+C7+C12 (SOC clamp),205150.55
+texas_2023,Full Repair,197121.33

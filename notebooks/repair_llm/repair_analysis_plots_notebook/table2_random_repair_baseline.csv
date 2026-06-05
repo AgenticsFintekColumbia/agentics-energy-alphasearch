@@ -1,0 +1,6 @@
+Dataset,Days,Random→Repair Profit,GPT (pre-repair) Profit,GPT+Repair Profit,Random→Repair / GPT+Repair
+Italy,364,-22425.27,627354.67,607958.31,-3.7%
+new_york_2022,364,-29513.61,831252.26,806722.64,-3.7%
+new_york_2023,364,-7377.34,312220.06,304382.64,-2.4%
+texas_2022,363,-22545.29,505160.24,468406.58,-4.8%
+texas_2023,314,-9906.73,204928.07,197121.33,-5.0%
