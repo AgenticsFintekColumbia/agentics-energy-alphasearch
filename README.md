@@ -327,7 +327,12 @@ We will review PRs promptly and collaborate to improve the project together.
 
 ## 📚 Citation
 
-If you use AlphaSearch in academic work or publications, please cite: 
-```
-pending
-```
+If you use this code, please cite the associated KDD 2026 paper:
+
+**AlphaSearch: Agentic AI for Price Arbitrage in Energy Systems**  
+Millend Roy and Vladimir Pyltsov  
+DOI: `10.1145/3770855.3818957`
+
+The formal ACM Digital Library citation will be added once the paper is publicly available.
+
+Dataset DOI: `10.5281/zenodo.20478895`  
