@@ -19,6 +19,7 @@ dependencies = [
     "fastmcp",
     "crewai",
     "crewai-tools",
+    "pytest",
 ]
 
 [tool.setuptools]
