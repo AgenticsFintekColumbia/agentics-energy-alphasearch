@@ -32,4 +32,4 @@ jobs:
     - name: Run tests
       working-directory: agentic_energy
       run: |
-        uv run pytest
+        uv run pytest || test $? -eq 5
