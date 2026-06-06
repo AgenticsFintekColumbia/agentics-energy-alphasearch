@@ -1,6 +1,6 @@
 # AlphaSearch :Agentic Energy Arbitrage with Battery Storage ⚡🤖
 
-[![DOI](https://zenodo.org/badge/1068185850.svg)](https://doi.org/10.5281/zenodo.20573369)
+[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.20573370-blue)](https://doi.org/10.5281/zenodo.20573370)
 
 This repository implements an **agentic AI pipeline** for daily battery arbitrage using:
 
