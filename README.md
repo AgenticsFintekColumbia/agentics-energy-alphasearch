@@ -292,7 +292,7 @@ If configured, you’ll see logs such as:
 - Tool calls like Using Tool: milp_solve and the resulting objective and schedule
 
 
-## 👨‍💻 Authors & Contributors
+## 👨‍💻 Authors & Contributors of the code repository
 
 - **Millend Roy** 
 - **Vlad Pyltsov** 
