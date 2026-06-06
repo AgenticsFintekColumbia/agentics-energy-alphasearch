@@ -26,9 +26,11 @@ jobs:
           uv-venv-${{ runner.os }}-
 
     - name: Create virtualenv and install dependencies
+      working-directory: agentic_energy
       run: |
         uv sync
         
     - name: Run tests
+      working-directory: agentic_energy
       run: |
         uv run pytest
