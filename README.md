@@ -1,5 +1,7 @@
 # AlphaSearch :Agentic Energy Arbitrage with Battery Storage ⚡🤖
 
+[![DOI](https://zenodo.org/badge/1068185850.svg)](https://doi.org/10.5281/zenodo.20573369)
+
 This repository implements an **agentic AI pipeline** for daily battery arbitrage using:
 
 - A **MILP oracle** (via `agentic_energy`) for optimal charge/discharge decisions  
