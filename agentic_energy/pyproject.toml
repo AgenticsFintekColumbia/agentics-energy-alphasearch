@@ -7,7 +7,7 @@ name = "agentic-energy"
 version = "0.1.0"
 description = "Energy arbitrage tools on top of Agentics"
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.11,<3.13"
 dependencies = [
     "agentics-py>=0.0.0",        # ✅ THIS is your Agentics dependency
     "numpy",
