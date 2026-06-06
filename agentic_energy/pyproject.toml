@@ -29,6 +29,7 @@ dev = [
 [project.optional-dependencies]
 rl = [
     "gymnasium",
+    "ray[rllib]",
 ]
 
 [tool.setuptools]
