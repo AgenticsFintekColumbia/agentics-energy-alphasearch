@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the associated KDD 2026 paper. The code archive DOI will be added once the GitHub repository is archived on Zenodo."
+title: "AlphaSearch: Agentic AI for Price Arbitrage in Energy Systems"
+authors:
+  - family-names: Roy
+    given-names: Millend
+  - family-names: Pyltsov
+    given-names: Vladimir
+doi: 10.1145/3770855.3818957
+year: 2026
+repository-code: "https://github.com/AgenticsFintekColumbia/agentics-energy-alphasearch"
+license: CC-BY-4.0
+preferred-citation:
+  type: conference-paper
+  title: "AlphaSearch: Agentic AI for Price Arbitrage in Energy Systems"
+  authors:
+    - family-names: Roy
+      given-names: Millend
+    - family-names: Pyltsov
+      given-names: Vladimir
+  conference:
+    name: "Proceedings of the 32nd ACM SIGKDD Conference on Knowledge Discovery and Data Mining V.2"
+  year: 2026
+  doi: 10.1145/3770855.3818957
+  notes: "KDD '26, August 09--13, 2026, Jeju Island, Republic of Korea."
