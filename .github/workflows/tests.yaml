@@ -27,8 +27,7 @@ jobs:
 
     - name: Create virtualenv and install dependencies
       working-directory: agentic_energy
-      run: |
-        uv sync
+      run: uv sync --extra rl --group dev
         
     - name: Run tests
       working-directory: agentic_energy

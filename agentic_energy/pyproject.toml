@@ -22,5 +22,10 @@ dependencies = [
     "pytest",
 ]
 
+[project.optional-dependencies]
+rl = [
+    "gymnasium",
+]
+
 [tool.setuptools]
 packages = ["agentic_energy"]
